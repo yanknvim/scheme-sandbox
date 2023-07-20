@@ -4,5 +4,12 @@
 	)
 )
 
-(display (fib 20))
-(newline)
+(define (mainloop a b)
+	(unless (> a b)
+		(display (fib a))
+		(newline)
+		(mainloop (+ a 1) b)
+	)
+)
+
+(mainloop 1 40)
